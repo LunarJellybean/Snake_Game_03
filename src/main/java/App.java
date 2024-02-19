@@ -1,7 +1,7 @@
 import javax.swing.*;
 
 public class App {
-    public static void main(String args[])throws Exception {
+    public static void main(String arguments[])throws Exception {
         int boardWidth = 600;
         int boardHeight = boardWidth;
 
@@ -11,5 +11,9 @@ public class App {
         frame.setLocationRelativeTo(null);
         frame.setResizable(false);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        SnakeGame snakeGame = new SnakeGame(boardWidth, boardHeight);
+        frame.add(snakeGame);
+        frame.pack();
     }
 }
